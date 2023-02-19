@@ -1,10 +1,10 @@
 # A GregTech: New Horizons Dockerfile
 FROM alpine:latest
-# Variables
-ENV SERVER=GTNH_2.2.9_SERVER
-WORKDIR ~/SERVER
+# Setting a convenient alias and working dir
+ARG SERVER=GTNH_2.2.9_SERVER
+WORKDIR ~/${SERVER}
 # Adding server files from a directory
-ADD SERVER ~/
+ADD ${SERVER} ~/
 # Opening ports
 EXPOSE 25565/tcp
 EXPOSE 25565/udp
