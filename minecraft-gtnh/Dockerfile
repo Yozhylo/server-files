@@ -2,9 +2,9 @@
 FROM alpine:latest
 # Setting a convenient alias and working dir
 ARG SERVER=GTNH_2.2.9_SERVER
-WORKDIR ~/${SERVER}
+WORKDIR /${SERVER}
 # Adding server files from a directory
-ADD ${SERVER} ~/
+ADD ${SERVER} /${SERVER}
 # Opening ports
 EXPOSE 25565/tcp
 EXPOSE 25565/udp
